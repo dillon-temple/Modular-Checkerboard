@@ -1,0 +1,16 @@
+*{
+    display:inline-block;
+    border:1px black solid;
+}
+
+#wrapper{
+    width:850px;
+    height:850x;
+    background-color:tan;
+}
+
+.checker{
+    width:100px;
+    height:100px;
+}
+

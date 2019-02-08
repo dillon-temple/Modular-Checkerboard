@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='checkers.css') }}"> -->
+    <title>Document</title>
+</head>
+<style>
+
+*{
+    border:0px black solid;
+    margin:0px;
+    padding:0px;
+    font-size:0px;
+}
+
+#wrapper{
+    width:850px;
+    height:850px;
+    background-color:tan;
+}
+.row{
+}
+
+.checker1{
+    width:100px;
+    height:100px;
+    background-color:{{color1}};
+    display:inline-block;
+}
+.checker2{
+    width:100px;
+    height:100px;
+    background-color:{{color2}};
+    display:inline-block;
+}
+
+
+
+</style>
+<body>
+
+
+    
+    <!-- <div id="wrapper"> -->
+        {%for i in range(0,y): %}
+        <div class="row">
+            {%for j in range(0,x): %}
+            {%if (i+j) % 2 == 0%}
+                <div class="checker1"></div>
+            {%elif (i+j) % 2 == 1%}
+                <div class="checker2"></div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    <!-- </div> -->
+</body>
+</html>
